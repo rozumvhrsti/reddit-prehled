@@ -50,8 +50,11 @@ li { margin: .35rem 0; }
 hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
 strong { font-weight: 650; }
 h2#obsah + ul, h2#obsah + ul li { font-size: .97rem; }
-h2#obsah + ul a { text-decoration: none; color: var(--fg); }
-h2#obsah + ul a:hover { color: var(--accent); text-decoration: underline; }
+/* odkazy v obsahu: ať je vidět, že to jsou odkazy (podtržení až při hoveru,
+   aby 36 položek nepodtržením nezmizelo a zároveň nebylo přeplácané) */
+h2#obsah + ul a { color: var(--accent); text-decoration: none; }
+h2#obsah + ul a:hover { text-decoration: underline; }
+h2 { scroll-margin-top: 1.5rem; }
 footer.site { border-top: 1px solid var(--line); margin-top: 1rem; }
 /* archiv */
 .archive { list-style: none; padding: 0; margin: 1.5rem 0; }
