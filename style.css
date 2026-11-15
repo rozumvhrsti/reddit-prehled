@@ -1,0 +1,70 @@
+:root {
+  --bg: #fdfdfc;
+  --fg: #1c1b19;
+  --muted: #6b6760;
+  --line: #e3e0d9;
+  --accent: #b4451f;
+  --card: #f6f4ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16151a;
+    --fg: #e8e6e1;
+    --muted: #9b968c;
+    --line: #2e2c33;
+    --accent: #ff9166;
+    --card: #1e1d23;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 1.05rem/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-feature-settings: "kern";
+  text-rendering: optimizeLegibility;
+}
+header.site, footer.site {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  font-size: .9rem;
+  color: var(--muted);
+}
+header.site { display: flex; gap: .5rem; align-items: baseline; padding-top: 1.5rem; }
+header.site a { color: var(--muted); text-decoration: none; }
+header.site a:hover { color: var(--accent); }
+header.site .sep { color: var(--line); }
+main { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
+h1 { font-size: 1.85rem; line-height: 1.25; margin: 1.5rem 0 .75rem; letter-spacing: -.01em; }
+h2 { font-size: 1.2rem; line-height: 1.35; margin: 2.25rem 0 .5rem; }
+h2 + p { margin-top: .25rem; }
+p { margin: .75rem 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+ul { margin: .75rem 0; padding-left: 1.2rem; }
+li { margin: .35rem 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+strong { font-weight: 650; }
+h2#obsah + ul, h2#obsah + ul li { font-size: .97rem; }
+footer.site { border-top: 1px solid var(--line); margin-top: 1rem; }
+/* archiv */
+.archive { list-style: none; padding: 0; margin: 1.5rem 0; }
+.archive li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+  align-items: baseline;
+  padding: .7rem .9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--card);
+  margin: .5rem 0;
+}
+.archive .date { font-variant-numeric: tabular-nums; color: var(--muted); font-size: .9rem; min-width: 7.5rem; }
+.archive a { font-weight: 600; text-decoration: none; }
+.archive .meta { color: var(--muted); font-size: .85rem; margin-left: auto; }
+.lead { color: var(--muted); }
